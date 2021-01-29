@@ -1,0 +1,54 @@
+﻿@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using System.Collections.ObjectModel
+@using TestAPI.Areas.HelpPage.Models
+
+
+<link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<header class="help-page">
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1> South African Covid-19 Hotspots API</h1>
+        </div>
+    </div>
+</header>
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <h2>Introduction</h2>
+            <p>
+                API that scraps covid 19 data from discovery.co.za and makes it available for other appilcations to utilize
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">API LINK</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><a href="https://covidhotspotsza.azurewebsites.net/api/hotspots">/api/hotspots</a></th>
+                    <td>Get All Hotspots</td>
+                    <td>Scraps Hotspots from every Province in South Africa</td>
+
+                </tr>
+                <tr>
+                    <th scope="row"><a href="https://covidhotspotsza.azurewebsites.net/api/hotspots/KZN">/api/hotspots/{Province Code}</a></th>
+                    <td>Get Province Hotspots </td>
+                    <td>Scraps Hotspots from Province specifed in URL (eg. api/hotspots/KZN, api/hotspots/GP etc )</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </section>
+</div>
